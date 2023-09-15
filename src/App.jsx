@@ -5,13 +5,13 @@ import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import Contact from "./Routes/Contact";
 import { Route, Routes } from "react-router-dom";
-import { useContextGlobal } from "./Components/utils/global.context";
+
 
 function App() {
   // Obtener el valor de theme localStorage
-  const { theme } = useContextGlobal();
+ 
   return (
-    <div className={`App ${theme}`}>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
