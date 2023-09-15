@@ -1,0 +1,29 @@
+.footerContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 140px;
+  padding: 20px;
+}
+
+.footerContainer img {
+  width: 250px;
+}
+
+
+footer > p {
+  margin: 0;
+  padding-top: 0.7rem;
+}
+
+.icons {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+    width: 50px;
+}

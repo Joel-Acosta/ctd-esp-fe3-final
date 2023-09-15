@@ -1,0 +1,14 @@
+.dark .home {
+  background-color: rgb(0, 0, 0);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 90vw;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  justify-items: center;
+}
