@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const initialState = {
   theme: "light",
-  data: [],
+  data:[],
   api: [],
   detailData: {},
 };
@@ -21,16 +21,15 @@ export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context
   const [state, dispatch] = useReducer(
     reducer,
-    initialState,
-    dataFromLocalStorage
+    initialState/* ,
+    dataFromLocalStorage */
   );
 
   //Trae la info de users, osea todos los doctores
   useEffect(() => {
-    if (state?.api.length === 0) {
-      fetchDataFromApi();
-    }
-  }, [state]);
+    fetchDataFromApi();
+    dataFromLocalStorage();
+  }, []);
 
   // guardar en el localstrorage cuando uno de los valores cambia
   useEffect(() => {
@@ -107,10 +106,10 @@ export const ContextProvider = ({ children }) => {
   };
 
   const value = {
-    theme: state.theme,
-    data: state.data,
-    api: state.api,
-    detailData: state.detailData,
+    theme: state?.theme,
+    data: state?.data,
+    api: state?.api,
+    detailData: state?.detailData,
     addFavorite,
     removeFavorite,
     setTheme,

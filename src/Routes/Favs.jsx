@@ -2,7 +2,6 @@
 import Card from "../Components/Card";
 import { useContextGlobal } from "../Components/utils/global.context";
 
-
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
@@ -12,14 +11,15 @@ const Favs = () => {
     <div className={theme}>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {data.map((favorite) => (
-          <Card
-            key={favorite.id}
-            name={favorite.name}
-            username={favorite.username}
-            id={favorite.id}
-          />
-        ))}
+        {Array.isArray(data) &&
+          data.map((favorite) => (
+            <Card
+              key={favorite.id}
+              name={favorite.name}
+              username={favorite.username}
+              id={favorite.id}
+            />
+          ))}
       </div>
     </div>
   );

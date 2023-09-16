@@ -12,7 +12,7 @@ const Home = () => {
     <main className={`home ${theme}`}>
       <h1>Home</h1>
       <div className="card-grid">
-        {api.map((dentista) => (
+        {api?.map((dentista) => (
           <Card
             key={dentista.id}
             name={dentista.name}
