@@ -4,7 +4,7 @@ const Footer = () => {
 const {theme} = useContextGlobal
 
   return (
-    <footer className={`footerContainer ${theme}`}>
+    <footer className={`footerContainer ${theme? theme : ""}`}>
       {/* <div className="banner"></div> */}
       <div>
         <p>Powered by</p>

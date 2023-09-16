@@ -22,7 +22,7 @@ const Card = ({ name, username, id }) => {
   };
 
   return (
-    <div className={`card ${theme}`}>
+    <div className={`card ${theme? theme : ""}`}>
       <Link to={`/dentista/${id}`}>
         <img src="images/doctor.jpg" alt="doctor" />
         <p>Name: {name}</p>
